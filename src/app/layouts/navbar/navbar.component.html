@@ -1,1 +1,18 @@
-<p>navbar works!</p>
+<nav class="navbar">
+    <div class="navbar-brand">
+        <a routerLink=""> <!-- route générique pour le logo destination homepage-->
+            <img src="assets/logorougeparrot.png" alt="logo" width="90" height="90">
+        </a>
+    </div>
+    <ul class="navbar-nav" [class]="menuClass" [class.show]="isMenuOpen"> 
+        <li><a routerLink="/services" routerLinkActive="active" (click)="closeMenuAndNavigate('/services')">Services</a></li>
+        <li><a routerLink="/occasions" (click)="closeMenuAndNavigate('/occasions')">Occasions</a></li>
+        <li><a routerLink="/contact" (click)="closeMenuAndNavigate('/contact')">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" [class.open]="isMenuOpen" (click)="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</nav>
+

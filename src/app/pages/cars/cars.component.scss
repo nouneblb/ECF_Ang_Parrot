@@ -1,0 +1,67 @@
+* {
+    background-color: #262526;
+}
+
+/* styles for cards cars */
+.title-annonce {
+    margin-top: 50px;
+    margin-left: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.card-custom {
+    margin-top: 50px;
+    box-shadow: -2px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-image {
+    margin-top: 10px;
+    width: auto;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card-title {
+    color: whitesmoke;
+    font-weight: 300;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.card-p {
+    color: whitesmoke;
+    text-align: left;
+    font-weight: 200;
+    margin-top: 10px;
+    margin: 10px;
+}
+
+.tab-carac {
+    color: whitesmoke;
+}
+
+.carac-title {
+    margin: 10px;
+    color: grey;
+    font-weight: 200;
+}
+
+.carac-p {
+    margin-right: 10px;
+    color: black;
+    font-weight: 300;
+}
+
+.carac-km {
+    margin-right: 10px;
+    color: black;
+    font-weight: 300;
+}
+
+.carac-fuel {
+    margin-right: 25px;
+    color: black;
+    font-weight: 300;
+}

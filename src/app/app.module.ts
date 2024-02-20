@@ -11,6 +11,7 @@ import { OccasionsComponent } from './pages/occasions/occasions.component';
 import { CarsComponent } from './pages/cars/cars.component';
 import { CarsDetailsComponent } from './pages/cars-details/cars-details.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { FilterComponent } from './layouts/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     OccasionsComponent,
     CarsComponent,
     CarsDetailsComponent,
-    ContactComponent
+    ContactComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

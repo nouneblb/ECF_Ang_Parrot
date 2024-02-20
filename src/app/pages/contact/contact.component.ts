@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  nom: string='';
+  prenom: string='';
+  mail: string='';
+  number: string='';
+  message: string='';
 
+
+  onSubmitForm() {
+    console.log('Form submitted: ', this.nom, this.prenom, this.mail, this.number, this.message);
+  }
 }

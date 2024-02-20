@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+import { RouterModule } from '@angular/router';
+
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +17,7 @@ import { OccasionsComponent } from './pages/occasions/occasions.component';
 import { CarsComponent } from './pages/cars/cars.component';
 import { CarsDetailsComponent } from './pages/cars-details/cars-details.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { FilterComponent } from './layouts/filter/filter.component';
+
 
 @NgModule({
   declarations: [
@@ -24,11 +30,14 @@ import { FilterComponent } from './layouts/filter/filter.component';
     CarsComponent,
     CarsDetailsComponent,
     ContactComponent,
-    FilterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,21 @@
     background-color: #262526;
 }
 
+/* styles for forms */
+.form-control {
+    margin-top: 50px;
+    background-color: transparent;
+    color: grey;
+}
+
+.button-form {
+    margin-top: 50px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: whitesmoke; 
+}
+
 /* styles for cards cars */
 .title-annonce {
     margin-top: 50px;
@@ -65,3 +80,6 @@
     color: black;
     font-weight: 300;
 }
+
+/* Appliquer les mêmes styles aux résultats filtrés */
+

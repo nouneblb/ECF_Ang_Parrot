@@ -1,43 +1,132 @@
 
-<!-- titre section annonce après filtre -->
+<!-- Filter menu -->
 <div class="row">
-    <div class="col-12">
-        <h5 class="title-annonce">Annonces voitures d'occasion : Toulouse</h5>
-    </div>
-</div>
-
-<!-- Card cars occasions -->
-<div class="row justify-content-center">
-<div class="col-md-3 mb-4 mx-4 text-center card-custom" *ngFor="let car of occasionCars">
-    <div class="mb-4">
-        <img [src]="car.image[0]" alt="{{ occasionCars }} Image" class="custom-image img-fluid">
-    </div>
-
-    <div class="col-8 d-flex flex-column align-items-start justify-content-between">
+    <form class="d-flex justify-content-md-center" >
+    
+        <!-- col 1-->
+        <div class="col-md-auto mx-3">
+            <select id="prixDropdown" name="prixDropdown" class="form-control" [(ngModel)]="filterValues.prixType" (click)="togglePrixFields()">
+                <option value="prix" >Prix</option>
+            </select>
+        </div>
+        
+            <!-- Use ngIf to conditionally display the input fields based on the selected value -->
+            <div *ngIf="isPrixFieldsVisible" class="form-inline"> 
+              <input type="number" id="minPrix" name="minPrix" class="form-control" [(ngModel)]="filterValues.minPrix" placeholder="minPrix">
+              <input type="number" id="maxPrix" name="maxPrix" class="form-control" [(ngModel)]="filterValues.maxPrix" placeholder="maxPrix">
+            </div>
+    
+        <!-- col 2 -->
+        <!-- Kilometrage filter -->
+        <div class="col-md-auto mx-3">
+            <select id="klmDropdown" name="klmDropdown" class="form-control" [(ngModel)]="filterValues.Kilometrage" (click)="toggleKlmFields()">
+                <option value="Kilometrage">Kilometrage</option>
+            </select>
+        </div>
+    
+            <!-- Use ngIf to conditionally display the input fields based on the selected value -->
+            <div *ngIf="isKlmFieldsVisible"> 
+                <input type="number" id="minKilometrage" name="minKilometrage" class="form-control" [(ngModel)]="filterValues.minKilometrage" placeholder="minKlm">
+                <input type="number" id="maxKilometrage" name="maxKilometrage" class="form-control" [(ngModel)]="filterValues.maxKilometrage" placeholder="maxKlm">
+            </div>
+    
+        <!-- col 3 -->
+        <!-- Annee filter -->
+        <div class="col-md-auto mx-3">
+            <select id="AnneeDropdown" name="AnneeDropdown" class="form-control" [(ngModel)]="filterValues.Annee" (click)="toggleAnneeFields()">
+                <option value="année">Année</option>
+            </select>
+        </div>
+        
+            <!-- Use ngIf to conditionally display the input fields based on the selected value -->
+            <div *ngIf="isAnneeFieldsVisible"> 
+                <input type="number" id="minAnnee" name="minAnnee" class="form-control" [(ngModel)]="filterValues.minAnnee" placeholder="minAnnee">
+                <input type="number" id="maxAnnee" name="maxAnnee" class="form-control" [(ngModel)]="filterValues.maxAnnee" placeholder="maxAnnee">
+            </div>
+    
         <div>
-            <a [routerLink]="['/cars', car.id]" class="card-title" (click)="navigateToContent(car.id)">{{ car.title }}</a>
-            <p class="card-p">{{ car.price }} €</p>
+            <button type="submit" class="mx-3 button-form" (click)="findcar()">Filtrer</button>
         </div>
-
+    </form>
+    </div>
+    
+    <!-- Conteneur dynamique pour afficher les annonces de vehicules filtrés avec le même style -->
+    <div class="row justify-content-center">
+        <ng-container *ngIf="showFilteredResults; else showOriginalContent">
+            <div *ngFor="let car of filteredCars" class="col-md-3 mb-4 mx-4 text-center card-custom">
+                <div class="mb-4">
+                    <img [src]="car.image[0]" alt="{{ occasionCars }} Image" class="custom-image img-fluid">
+                </div>
+        
+                <div class="col-8 d-flex flex-column align-items-start justify-content-between">
+                    <div>
+                        <a [routerLink]="['/cars', car.id]" class="card-title" (click)="navigateToContent(car.id)">{{ car.title }}</a>
+                        <p class="card-p">{{ car.price }} €</p>
+                    </div>
+        
+                    <div class="row">
+                        <div class="d-flex">  
+                            <div class="tab-carac">
+                                <p class="carac-title">Année</p>
+                                <p class="carac-p">{{ car.year }}</p>
+                            </div>
+                
+                            <div class="tab-carac">
+                                <p class="carac-title">Kilométrage</p>
+                                <p class="carac-km">{{ car.mileage }} Km</p>
+                            </div>
+                
+                            <div class="tab-carac">
+                                <p class="carac-title">Carburant</p>
+                                <p class="carac-fuel">{{ car.fuel }}</p>
+                            </div>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    
+        <ng-template #showOriginalContent>
+        <!-- titre section annonce après filtre -->
         <div class="row">
-            <div class="d-flex">  
-                <div class="tab-carac">
-                    <p class="carac-title">Année</p>
-                    <p class="carac-p">{{ car.year }}</p>
+            <div class="col-12">
+                <h5 class="title-annonce">Annonces voitures d'occasion : Toulouse</h5>
+            </div>
+        </div>
+    
+    <!-- Card cars occasions -->
+    <div class="row justify-content-center">
+        <div class="col-md-3 mb-4 mx-4 text-center card-custom" *ngFor="let car of occasionCars">
+            <div class="mb-4">
+                <img [src]="car.image[0]" alt="{{ occasionCars }} Image" class="custom-image img-fluid">
+            </div>
+    
+            <div class="col-8 d-flex flex-column align-items-start justify-content-between">
+                <div>
+                    <a [routerLink]="['/cars', car.id]" class="card-title" (click)="navigateToContent(car.id)">{{ car.title }}</a>
+                    <p class="card-p">{{ car.price }} €</p>
                 </div>
     
-                <div class="tab-carac">
-                    <p class="carac-title">Kilométrage</p>
-                    <p class="carac-km">{{ car.mileage }} Km</p>
+                <div class="row">
+                    <div class="d-flex">  
+                        <div class="tab-carac">
+                            <p class="carac-title">Année</p>
+                            <p class="carac-p">{{ car.year }}</p>
+                        </div>
+            
+                        <div class="tab-carac">
+                            <p class="carac-title">Kilométrage</p>
+                            <p class="carac-km">{{ car.mileage }} Km</p>
+                        </div>
+            
+                        <div class="tab-carac">
+                            <p class="carac-title">Carburant</p>
+                            <p class="carac-fuel">{{ car.fuel }}</p>
+                        </div>
+                    </div>               
                 </div>
-    
-                <div class="tab-carac">
-                    <p class="carac-title">Carburant</p>
-                    <p class="carac-fuel">{{ car.fuel }}</p>
-                </div>
-            </div>               
+            </div>
         </div>
     </div>
-</div>
-</div>
-
+    </ng-template>
+    </div>

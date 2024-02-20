@@ -1,0 +1,44 @@
+* {
+    background-color: #262526;
+}
+
+.title-service {
+    margin-top: 100px;
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.desc-service {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 200;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    box-shadow: -2px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-image {
+    width: 80px;
+}
+
+.card-title {
+    margin-top: 20px;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+.card-desc {
+    margin-top: 30px;
+    color: whitesmoke;
+    font-weight: 200;
+    font-size: 15px;
+}

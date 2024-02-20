@@ -11,10 +11,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: '', component: HomeComponent},
-  { path: 'Services', component: ServicesPageComponent},
-  { path: 'Occasions', component: OccasionsComponent},
-  { path: 'Cars', component: CarsComponent},
-  { path: 'Cars-details', component: CarsDetailsComponent},
+  { path: 'services', component: ServicesPageComponent},
+  { path: 'occasions', component: OccasionsComponent},
+  { path: 'cars', component: CarsComponent},
+  { path: 'cars-details', component: CarsDetailsComponent},
   { path: 'contact', component: ContactComponent},
 
 ];

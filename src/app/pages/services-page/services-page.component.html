@@ -1,1 +1,25 @@
-<p>services-page works!</p>
+<app-navbar></app-navbar>
+
+<!-- Titre avant cards service -->
+<div class="row">
+    <div class="col-12">
+        <h1 class="title-service">Quel service vous faut-il ?</h1>
+        <p class="desc-service">Nos professionnels qualifiés sont dédiés à fournir une expérience exceptionnelle à chaque visite.<br> De la réparation minutieuse à l'entretien préventif, 
+            nous mettons tout en œuvre pour assurer la performance optimale de votre véhicule.</p>
+    </div>
+</div>
+
+<!-- cards services -->
+<div class="row">
+    <div class="col-md-4 mb-5" *ngFor="let service of services">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <img [src]="service.image" alt="{{ service.title }} Image " class="custom-image">
+                <h5 class="card-title">{{ service.title }}</h5>
+                <p class="card-desc">{{ service.description }} </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

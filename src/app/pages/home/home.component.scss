@@ -1,0 +1,110 @@
+
+* {
+    background-color: #262526;
+}
+
+.overlay {
+    position: relative;
+    background: url(/assets/homepageimg.jpg) center no-repeat;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay p {
+    margin-bottom: 20px;
+    background-color: transparent !important;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 27px;
+    font-style: italic;
+    letter-spacing: 0.5;
+    text-align: center;
+}
+
+
+/*add title before card section */
+.section-title {
+    margin-left: 10px;
+    margin-top: 50px;
+    color: whitesmoke;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* modifications des 3 cards */
+.card {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #262526 !important;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: whitesmoke !important;
+    text-transform: uppercase;
+}
+
+/* modification bouton  */
+.btn {
+    margin-top: 40px;
+    font-size: 10px;
+    text-transform: uppercase;
+    background-color: #D92332 !important;
+    color: white;
+    border: none !important;
+}
+
+.btn-hover-darken:hover {
+    filter: brightness(90%);
+}
+
+/* section card avis */
+.card-title2 {
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.card-text {
+    color: whitesmoke;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+}
+
+.card-name {
+    color: whitesmoke;
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px;
+    text-align: left;
+}
+
+.note {
+    color:#D92332;
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px;
+}
+
+.avis-form {
+    margin-top: 50px !important;
+    margin-bottom: 70px;
+    color: whitesmoke;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.avis-form:hover {
+    color: #d94350;
+}

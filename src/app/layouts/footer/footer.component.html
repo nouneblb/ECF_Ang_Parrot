@@ -1,1 +1,60 @@
-<p>footer works!</p>
+<footer class="row footer-section">
+    <div class="col mb-3">
+        <a href="" class="d-flex align-items-center mb-3 footer-logo">
+            <img src="/assets/logorougeparrot.png" alt="logo" width="60%" height="60%">
+        </a>
+        <p>&copy; 2024 Parrot Automobile. Tous droits reservés</p>
+    </div>
+
+    <!-- Col vide -->
+    <div class="col mb-3"></div>
+
+     <!-- Col Link -->
+     <div class="col mb-3">
+        <ul class="nav flex-column">
+            <h5 class="nav-title">Navigation</h5>
+            <li class="nav-item mb-2">
+                <a href="" class="nav-link p-0 ">Accueil</a>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="" class="nav-link p-0 ">Nos Services</a>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 ">Nos Véhicules</a>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 no-link-style">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Col contact -->
+    <div class="col mb-3">
+        <address class="footer-adress">
+            <h5 class="footer-adress">Contact</h5>
+            3 Avenue Street
+            <br>
+            31 000 Toulouse, France
+            <br><br>
+            <a href="tel:+33654376689" class="footer-link">Téléphone : 06 54 37 66 89</a>
+        </address>
+    </div>
+
+    <!-- Horaires -->
+    <div class="col-md-3 justify-content-end text-right footer-adress">
+        <h5 class="footer-horaires">Horaires</h5>
+            <ul class="list-unstyled">
+                <li *ngFor="let schedule of schedules" class="schedule-item">
+                    {{schedule.day}} :
+                    <span *ngIf="schedule.closed; else timeRanges">
+                        Fermé
+                    </span>
+                    <ng-template #timeRanges>
+                        <ul>
+                            <li *ngFor="let timeRanges of schedule.timeRanges" class="time-range">{{ timeRanges }}</li>
+                        </ul>
+                    </ng-template>
+                </li>
+            </ul>
+    </div>
+</footer>

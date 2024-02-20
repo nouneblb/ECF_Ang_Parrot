@@ -1,0 +1,26 @@
+/*font for text*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Lato:wght@100&display=swap');
+/*font for tittle*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    background-color: #D92332;
+    color: whitesmoke;
+    font-family: 'barlow', sans-serif;
+}
+
+.nav-title {
+    margin-top: 20px;
+}
+
+.footer-adress {
+    margin-top: 20px;
+}
+
+.schedule-item {
+    margin-bottom: 10px;
+}
+
+.time-range {
+    margin-left: 15px;
+}

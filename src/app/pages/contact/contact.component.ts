@@ -12,7 +12,6 @@ export class ContactComponent {
   number: string='';
   message: string='';
 
-
   onSubmitForm() {
     console.log('Form submitted: ', this.nom, this.prenom, this.mail, this.number, this.message);
   }

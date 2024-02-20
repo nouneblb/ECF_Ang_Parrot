@@ -17,7 +17,7 @@ import { OccasionsComponent } from './pages/occasions/occasions.component';
 import { CarsComponent } from './pages/cars/cars.component';
 import { CarsDetailsComponent } from './pages/cars-details/cars-details.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { SigninComponent } from './auth/signin/signin.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
@@ -31,7 +31,7 @@ import { SigninComponent } from './auth/signin/signin.component';
     CarsComponent,
     CarsDetailsComponent,
     ContactComponent,
-    SigninComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,

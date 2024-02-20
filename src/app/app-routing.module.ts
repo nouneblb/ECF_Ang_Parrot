@@ -8,6 +8,8 @@ import { CarsComponent } from './pages/cars/cars.component';
 import { CarsDetailsComponent } from './pages/cars-details/cars-details.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
+import { AuthComponent } from './auth/auth.component';
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: '', component: HomeComponent},
@@ -16,6 +18,7 @@ const routes: Routes = [
   { path: 'cars', component: CarsComponent},
   { path: 'cars/:id', component: CarsDetailsComponent},
   { path: 'contact', component: ContactComponent},
+  { path: 'auth', component: AuthComponent},
 
 ];
 

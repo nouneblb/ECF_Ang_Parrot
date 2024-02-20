@@ -1,1 +1,133 @@
+<app-navbar></app-navbar>
 
+<div>
+    <div *ngIf="car">
+      <div class="row">
+        <div class="col-md-6">
+            <!-- Carousel img -->
+            <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div *ngFor="let imgSrc of car.image; let i = index" class="carousel-item" [class.active]="i === currentImageIndex">
+                    <img [src]="car.image[currentImageIndex]" class="img-fluid custom-image" alt="{{ car.title }} Image">
+                  </div>
+                </div>
+                <a class="carousel-control-prev"  role="button" data-slide="prev" (click)="prevImage()">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next"  role="button" data-slide="next" (click)="nextImage()">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+              </div>
+        </div>
+
+        <!-- form -->
+        <div class="col-md-4 mx-5">
+          <h3 class="form-title mb-4">Contactez-nous au sujet de {{ car.title }} :</h3>
+
+          <form (submit)="submitForm()">
+            <div class="form-group mb-3">
+                <input type="text" id="fullName" name="fullname" class="form-control" required placeholder="Nom">
+            </div>
+
+            <div class="form-group mb-4">
+                <input type="text" id="email" name="email" class="form-control" required placeholder="E-mail">
+            </div>
+
+            <div class="form-group mb-3">
+                <textarea type="text" id="message" name="message" class="form-control" rows="4" required placeholder="Message"></textarea>
+            </div>
+
+            <button type="submit" class="btn custom-button">Envoyer</button>
+          </form>
+
+          <p class="reponse-msg mt-5">* Délai de traitement des réponses sous 24H </p>
+
+        </div>
+    </div>
+</div>
+
+    <!-- description véhicule -->
+    <div class="row">
+        <h2 class="title-content">{{ car.title }}</h2>
+        <h4 class="text-content"> {{ car.price | number }} €</h4>
+        <div class="row mb-3">
+            <div class="d-flex">
+                <p class="text-year"> {{ car.year }}</p>
+                <p class="text-mileage"> {{ car.mileage | number }} Km</p>
+                <p class="text-fuel">{{ car.fuel }}</p>
+            </div>
+        </div>
+
+    <!-- tableau critères véhicules -->
+    <h4 class="table-title col-md-6">Critères</h4>
+
+        <div class="row">
+            <div class="col-md-6 d-flex">
+                <div class="col-sm">
+                    <p class="crit-title">Marque</p>
+                    <span class="crit-desc">{{ car.brand }}</span>
+                </div>
+
+                <div class="col-sm">
+                    <p class="crit-title">Année</p>
+                    <span class="crit-desc">{{ car.year }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 d-flex">
+                <div class="col-sm">
+                    <p class="crit-title">Kilométrage</p>
+                    <span class="crit-desc">{{ car.mileage | number }}</span>
+                </div>
+
+                <div class="col-sm">
+                    <p class="crit-title">Boîte de vitesse</p>
+                    <span class="crit-desc">{{ car.gearbox}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 d-flex mb-5">
+                <div class="col-sm">
+                    <p class="crit-title">Nombre de portes</p>
+                    <span class="crit-desc"> {{ car.door }}</span>
+                </div>
+
+                <div class="col-sm">
+                    <p class="crit-title">Couleur</p>
+                    <span class="crit-desc">{{ car.color }}</span>
+                </div>
+            </div>
+        </div>
+    
+        <!-- tableau équipement véhicules -->
+        <div class="col-md-6">
+            <h4 class="table-title">Equipements</h4>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 d-flex">
+                <div class="col-sm mb-5">
+                    <p class="crit-title">Sécurité</p>
+                    <span class="crit-desc">ABS - AFU - ESP</span>
+
+                    <p class="crit-title">Intérieur</p>
+                    <span class="crit-desc">Direction assistée - Climatisation - Chauffage</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- affichage si cars non trouvé -->
+    <div *ngIf="!car">
+      <p>Car not found.</p>
+    </div>
+  </div>
+
+
+<app-footer></app-footer>

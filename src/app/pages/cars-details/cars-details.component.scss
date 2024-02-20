@@ -1,0 +1,95 @@
+* {
+    background-color: #262526;
+}
+
+/* custom image styles */
+.custom-image {
+    margin: 40px 10px;
+    border-radius: 5px;
+}
+
+/* custom carousel styles */
+
+
+.title-content {
+    color: whitesmoke;
+    margin-left: 10px;
+    font-weight: 200;
+}
+
+.text-content {
+    color: whitesmoke;
+    margin: 10px 10px;
+    font-weight: 300;
+}
+
+.text-year {
+    color: grey;
+    margin: 20px 10px ;
+}
+
+.text-mileage {
+    color: grey;
+    margin: 20px 10px;
+}
+
+.text-fuel {
+    color: grey;
+    margin: 20px 10px;
+}
+
+/* custom card table styles */
+
+.crit-title {
+    color: whitesmoke;
+    margin: 20px 10px;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.crit-desc {
+    color: grey;
+    margin: 0 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.table-title {
+    color: whitesmoke;
+    margin: 20px 10px;
+    font-weight: 300;
+}
+
+/* custom form styles */
+.form-title {
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 17px;
+    margin-top: 40px;
+}
+
+.message {
+    color: grey;
+}
+
+.custom-button {
+    background-color: #D92533;
+    color: whitesmoke;
+}
+
+.custom-button:hover {
+    color: whitesmoke;
+    background-color: grey;
+}
+
+.reponse-msg {
+    color: whitesmoke;
+    border: 1px solid white;
+    padding: 10px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+
+
+

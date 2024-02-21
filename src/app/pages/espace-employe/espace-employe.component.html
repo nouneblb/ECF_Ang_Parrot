@@ -1,13 +1,15 @@
+<app-navbar></app-navbar>
 
-<h1>Espace Employé</h1>
+<div class="row espace-employe text-center">
+  <h1 class="mb-5 title-employe">Espace Employé</h1>
+</div>
 
-<div>
-  <h2>Gestion des avis</h2>
+<div class="row text-center">
   <a routerLink="/managereview">Gestion des avis</a>
-  
 </div>
-<div>
-  <h2>Gestion des véhicules</h2>
-  <a routerLink="/ajouter-vehicule">Ajouter un véhicule</a>
-  <a routerLink="/gerer-vehicules">Gérer les véhicules</a>
+
+<div class="row text-center">
+  <a routerLink="/gerer-vehicules" class="mb-5">Gérer les véhicules</a>
 </div>
+
+<app-footer></app-footer>

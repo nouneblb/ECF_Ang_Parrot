@@ -19,6 +19,7 @@ import { CarsDetailsComponent } from './pages/cars-details/cars-details.componen
 import { ContactComponent } from './pages/contact/contact.component';
 import { AuthComponent } from './auth/auth.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
+import { CustomerReviewComponent } from './pages/customer-review/customer-review.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
     ContactComponent,
     AuthComponent,
     EmployeeFormComponent,
+    CustomerReviewComponent,
   ],
   imports: [
     BrowserModule,

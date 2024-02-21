@@ -20,6 +20,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AuthComponent } from './auth/auth.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { CustomerReviewComponent } from './pages/customer-review/customer-review.component';
+import { EspaceEmployeComponent } from './pages/espace-employe/espace-employe.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { CustomerReviewComponent } from './pages/customer-review/customer-review
     AuthComponent,
     EmployeeFormComponent,
     CustomerReviewComponent,
+    EspaceEmployeComponent,
   ],
   imports: [
     BrowserModule,

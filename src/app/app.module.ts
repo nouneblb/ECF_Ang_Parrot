@@ -18,6 +18,7 @@ import { CarsComponent } from './pages/cars/cars.component';
 import { CarsDetailsComponent } from './pages/cars-details/cars-details.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AuthComponent } from './auth/auth.component';
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { AuthComponent } from './auth/auth.component';
     CarsDetailsComponent,
     ContactComponent,
     AuthComponent,
+    EmployeeFormComponent,
   ],
   imports: [
     BrowserModule,

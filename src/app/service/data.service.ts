@@ -12,6 +12,7 @@ export class DataService {
     this.apiUrl = 'http://localhost:8889/api';
   }
 
+  // récupération de données depuis le backend 
   getSomeDate(): Observable<any> {
     return this.http.get<any>('${this.apiUrl}/endpoint');
   }

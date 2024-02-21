@@ -1,1 +1,15 @@
-<p>employee-form works!</p>
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <label for="firstName">Prénom :</label>
+    <input type="text" formControlName="firstName">
+    
+    <label for="lastName">Nom :</label>
+    <input type="text" formControlName="lastName">
+
+    <label for="email">E-mail :</label>
+    <input type="text" formControlName="email">
+
+    <label for="password">Mot de passe</label>
+    <input type="text" formControlName="password">
+    
+    <button type="submit">Créer employé</button>
+  </form>

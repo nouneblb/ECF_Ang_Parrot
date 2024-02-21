@@ -22,6 +22,7 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { CustomerReviewComponent } from './pages/customer-review/customer-review.component';
 import { EspaceEmployeComponent } from './pages/espace-employe/espace-employe.component';
 import { ManageReviewComponent } from './pages/manage-review/manage-review.component';
+import { ManageCarsComponent } from './pages/manage-cars/manage-cars.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { ManageReviewComponent } from './pages/manage-review/manage-review.compo
     CustomerReviewComponent,
     EspaceEmployeComponent,
     ManageReviewComponent,
+    ManageCarsComponent,
   ],
   imports: [
     BrowserModule,

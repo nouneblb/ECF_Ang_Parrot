@@ -23,7 +23,7 @@ export class ManageReviewComponent {
       response => {
         this.avis = response; // Stocker les avis récupérés dans la propriété avis
       },
-      error => {
+      (error) => {
         console.log('Erreur lors de la récupération des avis:', error);
       }
     );

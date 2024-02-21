@@ -40,4 +40,8 @@ export class AuthService {
     // Vérifier si le token JWT est présent dans le localStorage (=user actuellement authentifié ou non)
     return !!localStorage.getItem('token');
   }
+
+  getAuthToken(): string | null {
+    return localStorage.getItem('token');
+  }
 }

@@ -21,6 +21,7 @@ import { AuthComponent } from './auth/auth.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { CustomerReviewComponent } from './pages/customer-review/customer-review.component';
 import { EspaceEmployeComponent } from './pages/espace-employe/espace-employe.component';
+import { ManageReviewComponent } from './pages/manage-review/manage-review.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { EspaceEmployeComponent } from './pages/espace-employe/espace-employe.co
     EmployeeFormComponent,
     CustomerReviewComponent,
     EspaceEmployeComponent,
+    ManageReviewComponent,
   ],
   imports: [
     BrowserModule,

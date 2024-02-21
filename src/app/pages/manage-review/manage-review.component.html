@@ -1,1 +1,8 @@
-<p>manage-review works!</p>
+
+<h1>Gestion des avis clients</h1>
+
+<div *ngFor="let review of avis">
+  <p>{{ review.commentaire }}</p>
+  <button (click)="deleteAvis(review.id)" class="btn btn-custom">Supprimer</button>
+  <button (click)="publishAvis(review.id)" class="btn btn-custom">Publier</button>
+</div>

@@ -11,6 +11,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AuthComponent } from './auth/auth.component';
 
 import { CustomerReviewComponent } from './pages/customer-review/customer-review.component';
+import { ManageReviewComponent } from './pages/manage-review/manage-review.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'connexion', component: AuthComponent},
   { path: 'review', component: CustomerReviewComponent},
+  { path: 'managereview', component: ManageReviewComponent},
 
 ];
 

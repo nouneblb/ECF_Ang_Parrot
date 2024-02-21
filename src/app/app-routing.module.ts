@@ -10,6 +10,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 import { AuthComponent } from './auth/auth.component';
 
+import { CustomerReviewComponent } from './pages/customer-review/customer-review.component';
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: '', component: HomeComponent},
@@ -19,6 +21,7 @@ const routes: Routes = [
   { path: 'cars/:id', component: CarsDetailsComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'connexion', component: AuthComponent},
+  { path: 'review', component: CustomerReviewComponent},
 
 ];
 

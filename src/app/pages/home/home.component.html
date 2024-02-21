@@ -64,57 +64,58 @@
     </div>
 </div>
 
-<!-- AVIS CLIENT FICTIF -->
+<!-- AVIS CLIENTS -->
 <div class="row justify-content-center">
-    <!-- Première carte -->
-    <div class="col-12 col-md-4">
+    <!-- Première carte / Itération sur les avis récupérés -->
+    <div *ngFor="let review of avis" class="col-12 col-md-4">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title2">Service Exceptionnel</h3>
-                <p class="card-text">Je suis extrêmement satisfait du service offert par Parrot Automobile. 
-                Leur équipe compétente a pris en charge rapidement la réparation de ma voiture, fournissant un service professionnel du début à la fin. Je recommande vivement!</p>
-                <p class="card-name">J.Smith</p>
+                <h3 class="card-title2">{{ review.nom }}</h3>
+                <p class="card-text">{{ review.commentaire }}</p>
+                <p class="card-name">{{ review.date }}</p>
             </div>
+            <!-- utiliser la note dynamique -->
             <div class="note position-absolute top-0 end-0 p-2">
-                5/5
+               {{ review.note }}
             </div>
         </div>
     </div>
 
-    <!-- Deuxième carte -->
-    <div class="col-12 col-md-3">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title2">Rapidité et Efficacité</h3>
-                <p class="card-text">Parrot Automobile m'a impressionné par la rapidité et l'efficacité de leur service. La réparation de mon véhicule a été effectuée dans les délais promis, et l'équipe était courtoise et professionnelle. 
-                Je suis un client satisfait.</p>
-                <p class="card-name text-left">O.Kim</p>
-            </div>
-            <div class="note position-absolute top-0 end-0 p-2">
-                4.5/5
-            </div>
-        </div>
-    </div>
-
-    <!-- Troisième carte -->
-    <div class="col-12 col-md-4">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title2">Expérience en demi-teinte</h3>
-                <p class="card-text">Ma récente visite chez Parrot Automobile a été mitigée. La réparation a pris plus de temps que prévu, ce qui a été un inconvénient. 
-                J'apprécie leur service client, mais j'espère une amélioration dans les délais à l'avenir.</p>
-                <p class="card-name text-left">T.García</p>
-            </div>
-            <div class="note position-absolute top-0 end-0 p-2">
-                3.5/5
+    <div class="row justify-content-center">
+        <!-- Première carte / Itération sur les avis récupérés -->
+        <div *ngFor="let review of avis" class="col-12 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title2">{{ review.nom }}</h3>
+                    <p class="card-text">{{ review.commentaire }}</p>
+                    <p class="card-name">{{ review.date }}</p>
+                </div>
+                <!-- utiliser la note dynamique -->
+                <div class="note position-absolute top-0 end-0 p-2">
+                   {{ review.note }}
+                </div>
             </div>
         </div>
-    </div>
 
+        <div class="row justify-content-center">
+            <!-- Première carte / Itération sur les avis récupérés -->
+            <div *ngFor="let review of avis" class="col-12 col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title2">{{ review.nom }}</h3>
+                        <p class="card-text">{{ review.commentaire }}</p>
+                        <p class="card-name">{{ review.date }}</p>
+                    </div>
+                    <!-- utiliser la note dynamique -->
+                    <div class="note position-absolute top-0 end-0 p-2">
+                       {{ review.note }}
+                    </div>
+                </div>
+            </div>
      <!-- Section text en dessous des avis pour encourager à poster via notre formulaire -->
      <div class="container-fluid section3">
         <div class="row">
-            <a routerLink="/" class="avis-form">"Votre opinion compte ! Partagez votre expérience avec nous en laissant un avis. 
+            <a routerLink="/review" class="avis-form">"Votre opinion compte ! Partagez votre expérience avec nous en laissant un avis. 
                 Votre retour est précieux pour nous améliorer et pour aider d'autres clients."</a>
         </div>
     </div>

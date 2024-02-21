@@ -1,1 +1,52 @@
-<p>customer-review works!</p>
+<app-navbar></app-navbar>
+
+<!--titre + p avant form-->
+<div class="row text-center testimonial">
+        <div class="col-12">
+            <h1 class="title-avis">Vos retours comptes</h1>
+            <p class="mt-4 mb-5 p-avis">N'hésitez pas à nous laisser votre avis sur nos services, afin de continuer à nous améliorer</p>
+        </div>  
+</div>
+
+    <!-- form avis client -->
+    <div class="text-center">
+            <form (submit)="onSubmit()">
+                <div class="mb-4">
+                    <input type="text" id="nom" name="nom" class="form-control" placeholder="Nom" [(ngModel)]="nom">  
+                </div>
+            
+                <div class="mb-4">
+                    <input type="text" id="email" name="email" class="form-control" placeholder="E-mail" [(ngModel)]="email">
+                </div>
+            
+                <!-- date format jj/mm/aaaa-->
+                <div class="mb-4 date">
+                    <label for="date">Date de l'avis :</label> <br>
+                    <span>{{ currentDate }}</span>
+                </div>
+            
+                <!-- range pour la note + afficher la valeur sélectionné -->
+                <div class="mb-4 note">
+                    <div class="mb-4">
+                        <label for="note" class="note-label">Note</label> 
+                    </div>
+                    <input type="range" id="note" name="note" min="1" max="5" step="1" class="range-input" [(ngModel)]="selectedNote">
+                    <output class="range">{{ selectedNote }}</output>
+                </div>
+            
+                <div class="mb-4">
+                    <textarea id="message" name="message" rows="4" class="form-control" placeholder="Message" [(ngModel)]="message"></textarea>               
+                </div>
+                            
+                <button type="submit" class="btn btn-custom">Partager</button>
+            </form>
+        </div>
+
+        <div class="mb-4 note" *ngFor="let avisItem of avis">
+            <div class="mb-4">
+                <label class="note-label">Avis de {{ avisItem.nom }}</label>
+            </div>
+            <p>{{ avisItem.commentaire }}</p>
+        </div>
+
+<app-footer></app-footer>

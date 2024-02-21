@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'cars', component: CarsComponent},
   { path: 'cars/:id', component: CarsDetailsComponent},
   { path: 'contact', component: ContactComponent},
-  { path: 'connexion', component: AuthComponent},
+  { path: 'auth', component: AuthComponent},
   { path: 'review', component: CustomerReviewComponent},
   { path: 'managereview', component: ManageReviewComponent},
   { path: 'espaceemploye', component: EspaceEmployeComponent},

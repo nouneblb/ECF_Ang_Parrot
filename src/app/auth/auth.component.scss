@@ -1,0 +1,56 @@
+.auth-page {
+    flex: 1;
+    background: linear-gradient(
+        59.32deg,
+        rgba(38, 37, 38, 1) 0%,
+        rgba(39, 40, 41, 1) 51.75%,
+        rgba(97, 103, 122, 1) 102.37%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+}   
+
+
+.login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent; /* Couleur de fond du formulaire */
+    border: 1px solid #262526;
+    box-shadow: 5px 8px 5px 3px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Largeur maximale du formulaire */
+    width: 90%; /* Largeur du formulaire */
+}
+
+.text-auth {
+    color: whitesmoke;
+    font-family: 'poppins' sans-serif;
+    font-weight: 200;
+}
+
+.card-body {
+    box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
+}
+
+.form-label {
+    margin-top: 30px;
+    font-size: 17px;
+    color: whitesmoke;
+}
+
+.btn-custom {
+    background-color: #D92332;
+    color: whitesmoke;
+}
+

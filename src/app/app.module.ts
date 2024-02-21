@@ -20,10 +20,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AuthComponent } from './auth/auth.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { CustomerReviewComponent } from './pages/customer-review/customer-review.component';
-import { EspaceEmployeComponent } from './pages/espace-employe/espace-employe.component';
+import { EspaceEmployeComponent } from './pages/employeDashboard/espace-employe.component';
 import { ManageReviewComponent } from './pages/manage-review/manage-review.component';
 import { ManageCarsComponent } from './pages/manage-cars/manage-cars.component';
-import { EspaceAdminComponent } from './pages/espace-admin/espace-admin.component';
+import { EspaceAdminComponent } from './pages/adminDashboard/espace-admin.component';
 
 
 @NgModule({

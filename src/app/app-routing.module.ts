@@ -15,8 +15,8 @@ import { ManageReviewComponent } from './pages/manage-review/manage-review.compo
 
 import { ManageCarsComponent } from './pages/manage-cars/manage-cars.component';
 
-import { EspaceEmployeComponent } from './pages/espace-employe/espace-employe.component';
-import { EspaceAdminComponent } from './pages/espace-admin/espace-admin.component';
+import { EspaceEmployeComponent } from './pages/employeDashboard/espace-employe.component';
+import { EspaceAdminComponent } from './pages/adminDashboard/espace-admin.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},

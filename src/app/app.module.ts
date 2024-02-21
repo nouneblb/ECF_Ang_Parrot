@@ -23,6 +23,7 @@ import { CustomerReviewComponent } from './pages/customer-review/customer-review
 import { EspaceEmployeComponent } from './pages/espace-employe/espace-employe.component';
 import { ManageReviewComponent } from './pages/manage-review/manage-review.component';
 import { ManageCarsComponent } from './pages/manage-cars/manage-cars.component';
+import { EspaceAdminComponent } from './pages/espace-admin/espace-admin.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { ManageCarsComponent } from './pages/manage-cars/manage-cars.component';
     EspaceEmployeComponent,
     ManageReviewComponent,
     ManageCarsComponent,
+    EspaceAdminComponent,
   ],
   imports: [
     BrowserModule,

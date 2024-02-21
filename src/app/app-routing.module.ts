@@ -13,7 +13,10 @@ import { AuthComponent } from './auth/auth.component';
 import { CustomerReviewComponent } from './pages/customer-review/customer-review.component';
 import { ManageReviewComponent } from './pages/manage-review/manage-review.component';
 
+import { ManageCarsComponent } from './pages/manage-cars/manage-cars.component';
+
 import { EspaceEmployeComponent } from './pages/espace-employe/espace-employe.component';
+import { EspaceAdminComponent } from './pages/espace-admin/espace-admin.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -27,6 +30,8 @@ const routes: Routes = [
   { path: 'review', component: CustomerReviewComponent},
   { path: 'managereview', component: ManageReviewComponent},
   { path: 'espaceemploye', component: EspaceEmployeComponent},
+  { path: 'managecars', component: ManageCarsComponent},
+  { path: 'espaceadmin', component: EspaceAdminComponent},
 
 ];
 
